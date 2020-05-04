@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import render
-from .models import music
+from .models import Artist
 from .serializers import musicSerializer
 
 
@@ -9,7 +9,7 @@ from .serializers import musicSerializer
 class musicList(APIView):
 
     def get(self, request):
-        music_list = music.objects.all()
+        music_list = Artist.objects.all()
         serializer = musicSerializer(music_list, many=True)
         return Response(serializer.data)
 
