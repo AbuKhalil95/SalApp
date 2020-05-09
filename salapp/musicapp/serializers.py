@@ -16,6 +16,7 @@ class musicSerializer(serializers.ModelSerializer):
         model = Artist
         fields = ('artist', 'album', 'track_name')
 
+    # To learn function (deprecated)
     # def to_representation(self, instance):
     #     response_dict = dict()
     #     response_dict[instance.artist] = {

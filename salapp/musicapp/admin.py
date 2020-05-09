@@ -9,7 +9,7 @@ from .models import Artist
 #
 # # Register your models here.
 class musicAdmin(admin.ModelAdmin):
-    list_display = ('track_name', 'artist', 'album')
+    list_display = ('track_name', 'artist', 'album', 'logo_url')
     list_filter = ['artist', 'album']
     search_fields = ['track_name', 'artist', 'album']
 #    inlines = [MusicInline]
